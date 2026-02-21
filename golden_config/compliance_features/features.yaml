@@ -1,6 +1,5 @@
 ---
 # Golden Config Compliance Features
-# These define the features to check for compliance
 
 - name: Banner
   slug: banner

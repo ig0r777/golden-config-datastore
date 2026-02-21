@@ -1,6 +1,5 @@
 ---
-# Golden Config Compliance Rules
-# Map features to their compliance rule files
+# Compliance Rules for Arista EOS
 
 - feature: Banner
   platform: Arista EOS
