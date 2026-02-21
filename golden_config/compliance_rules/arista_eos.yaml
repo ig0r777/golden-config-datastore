@@ -4,14 +4,18 @@
 - feature: banner
   platform: Arista EOS
   config_ordered: false
-  match_config: compliance/arista_eos/banner.txt
+  match_config: |
+    banner motd
 
 - feature: ssh
   platform: Arista EOS
   config_ordered: false
-  match_config: compliance/arista_eos/ssh.txt
+  match_config: |
+    ip ssh version 2
+    management ssh
 
 - feature: hostname
   platform: Arista EOS
   config_ordered: false
-  match_config: compliance/arista_eos/hostname.txt
+  match_config: |
+    hostname
