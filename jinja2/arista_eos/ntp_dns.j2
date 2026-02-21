@@ -1,0 +1,11 @@
+!
+! DNS Configuration
+!
+ip name-server vrf default 8.8.8.8
+ip name-server vrf default 1.1.1.1
+!
+! NTP Configuration
+!
+ntp server time.google.com prefer
+ntp server time.cloudflare.com
+!

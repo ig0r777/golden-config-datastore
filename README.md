@@ -10,20 +10,49 @@ This repository contains Golden Config data for Nautobot.
 ├── intended/            # Generated intended configurations (auto-populated)
 ├── jinja2/              # Jinja2 templates for intended configs
 │   └── arista_eos/      # Arista EOS specific templates
-│       └── base_config.j2
-└── compliance/          # Compliance rules and features (optional)
+│       ├── banner.j2    # Banner/MOTD configuration
+│       ├── ssh.j2       # SSH settings and security
+│       ├── hostname.j2  # Device hostname
+│       ├── management.j2 # Management interface
+│       ├── ntp_dns.j2   # NTP and DNS servers
+│       ├── aaa.j2       # AAA and local users
+│       └── base_config.j2 # Full base config (legacy)
+└── compliance/          # Compliance rules for config validation
+    └── arista_eos/
+        ├── banner.txt   # Banner compliance rule
+        ├── ssh.txt      # SSH compliance rule
+        └── hostname.txt # Hostname compliance rule
 ```
 
-## Templates
+## Features
 
-### Arista EOS Base Configuration (`jinja2/arista_eos/base_config.j2`)
-Provides basic configuration including:
-- Hostname
-- Management interface
-- DNS and NTP
-- AAA (admin user)
-- API services (HTTP, gNMI, NETCONF)
-- Banner
+Golden Config uses a feature-based approach where each template represents a specific configuration feature:
+
+### Banner (`banner.j2`)
+- Login banner (MOTD)
+- Device identification
+- Security warning
+
+### SSH (`ssh.j2`)
+- SSH version 2 enforcement
+- Timeout settings
+- Authentication retries
+- Management SSH configuration
+
+### Hostname (`hostname.j2`)
+- Device hostname from Nautobot
+
+### Management Interface (`management.j2`)
+- Management1 interface configuration
+- IP address from Nautobot primary_ip4
+
+### NTP/DNS (`ntp_dns.j2`)
+- DNS servers (Google, Cloudflare)
+- NTP servers (Google, Cloudflare)
+
+### AAA (`aaa.j2`)
+- Local authentication
+- Admin user account
 
 ## Usage in Nautobot
 

@@ -1,0 +1,16 @@
+!
+! SSH Configuration
+!
+ip ssh version 2
+!
+! SSH timeout and authentication retries
+ip ssh timeout 60
+ip ssh authentication retries 3
+!
+! Management SSH access
+management ssh
+   idle-timeout 30
+   authentication mode password
+   server-port 22
+   no shutdown
+!

@@ -1,0 +1,10 @@
+!
+! Management Interface Configuration
+!
+interface Management1
+   description Management Interface
+   {% if device.primary_ip4 %}
+   ip address {{ device.primary_ip4.address }}
+   {% endif %}
+   no shutdown
+!
