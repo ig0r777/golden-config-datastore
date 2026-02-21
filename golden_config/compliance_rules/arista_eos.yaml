@@ -1,21 +1,21 @@
 ---
 # Compliance Rules for Arista EOS
 
-- feature: banner
-  platform: Arista EOS
+- feature_slug: banner
+  platform_name: Arista EOS
   config_ordered: false
   match_config: |
     banner motd
 
-- feature: ssh
-  platform: Arista EOS
+- feature_slug: ssh
+  platform_name: Arista EOS
   config_ordered: false
   match_config: |
     ip ssh version 2
     management ssh
 
-- feature: hostname
-  platform: Arista EOS
+- feature_slug: hostname
+  platform_name: Arista EOS
   config_ordered: false
   match_config: |
     hostname
