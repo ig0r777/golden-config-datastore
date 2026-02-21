@@ -1,17 +1,17 @@
 ---
 # Compliance Rules for Arista EOS
 
-- feature: Banner
+- feature: banner
   platform: Arista EOS
   config_ordered: false
   match_config: compliance/arista_eos/banner.txt
 
-- feature: SSH
+- feature: ssh
   platform: Arista EOS
   config_ordered: false
   match_config: compliance/arista_eos/ssh.txt
 
-- feature: Hostname
+- feature: hostname
   platform: Arista EOS
   config_ordered: false
   match_config: compliance/arista_eos/hostname.txt
