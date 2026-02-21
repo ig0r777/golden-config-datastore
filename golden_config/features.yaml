@@ -1,0 +1,27 @@
+---
+# Golden Config Compliance Features
+# These define the features to check for compliance
+
+- name: Banner
+  slug: banner
+  description: Login banner configuration
+
+- name: SSH
+  slug: ssh
+  description: SSH version 2 and management settings
+
+- name: Hostname
+  slug: hostname
+  description: Device hostname configuration
+
+- name: Management Interface
+  slug: management_interface
+  description: Management interface IP configuration
+
+- name: NTP and DNS
+  slug: ntp_dns
+  description: NTP and DNS server configuration
+
+- name: AAA
+  slug: aaa
+  description: Authentication, authorization, and accounting

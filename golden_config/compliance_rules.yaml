@@ -1,0 +1,18 @@
+---
+# Golden Config Compliance Rules
+# Map features to their compliance rule files
+
+- feature: Banner
+  platform: Arista EOS
+  config_ordered: false
+  match_config: compliance/arista_eos/banner.txt
+
+- feature: SSH
+  platform: Arista EOS
+  config_ordered: false
+  match_config: compliance/arista_eos/ssh.txt
+
+- feature: Hostname
+  platform: Arista EOS
+  config_ordered: false
+  match_config: compliance/arista_eos/hostname.txt
